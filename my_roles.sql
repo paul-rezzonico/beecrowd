@@ -1,0 +1,27 @@
+--
+-- PostgreSQL database cluster dump
+--
+
+SET default_transaction_read_only = off;
+
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+
+--
+-- Roles
+--
+
+CREATE ROLE my_role_1;
+ALTER ROLE my_role_1 WITH SUPERUSER INHERIT NOCREATEROLE NOCREATEDB LOGIN NOREPLICATION NOBYPASSRLS PASSWORD 'md5d89a3faf1f0e77ed0a653e7ebe46490f';
+CREATE ROLE my_role_2;
+ALTER ROLE my_role_2 WITH SUPERUSER INHERIT NOCREATEROLE NOCREATEDB LOGIN NOREPLICATION NOBYPASSRLS PASSWORD 'md5a4eaa98c60f47fdea89bc31b34aed2df';
+CREATE ROLE sql_user;
+ALTER ROLE sql_user WITH SUPERUSER INHERIT CREATEROLE CREATEDB LOGIN REPLICATION BYPASSRLS PASSWORD 'md50b3f07beb6f1670191ab99d3d42369b8';
+
+
+
+
+--
+-- PostgreSQL database cluster dump complete
+--
+
